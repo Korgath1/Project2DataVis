@@ -2,21 +2,15 @@ Traffic Crash Insights Portfolio
 
 This Streamlit app provides an interactive exploration of traffic crash data, including patterns in crash timing, severity, weather conditions, and locations. The goal is to highlight key safety insights and demonstrate effective data visualization techniques using Python, Plotly, and Streamlit.
 
-Author
+Author  
+Santos Adducci  
+santosadducci@gmail.com  
 
-Santos Adducci
-
-santosadducci@gmail.com
-
-Includes
-
--Bio
-
--Dashboard (with filters)
-
--EDA Gallery
-
--Some Selected Insights
+Includes  
+-Bio  
+-Dashboard (with filters)  
+-EDA Gallery  
+-Some Selected Insights  
 
 Source
 
