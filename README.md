@@ -12,27 +12,18 @@ Includes
 -EDA Gallery  
 -Some Selected Insights  
 
-Source
+Source  
+https://www.kaggle.com/datasets/oktayrdeki/traffic-accidents?resource=download  
+209307 rows, 24 columns  
 
-https://www.kaggle.com/datasets/oktayrdeki/traffic-accidents?resource=download
+Preprocessing  
+crash_date to datetime  
+crash_hour to numeric  
+created is_fatal flag  
 
-209307 rows, 24 columns
-
-Preprocessing
-
-crash_date to datetime
-
-crash_hour to numeric
-
-created is_fatal flag
-
-How to Run the App
-
-git clone https://github.com/Korgath1/Project2DataVis.git
-
-pip install -r requirements.txt
-
-streamlit run app.py
-
+How to Run the App  
+git clone https://github.com/Korgath1/Project2DataVis.git  
+pip install -r requirements.txt  
+streamlit run app.py  
 
 ChatGPT used before any of the coding to brainstorm insights and app direction.
