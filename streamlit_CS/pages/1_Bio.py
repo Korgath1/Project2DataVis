@@ -1,12 +1,13 @@
 import os
 import streamlit as st
 
-st.title("👋 My Bio")
+st.set_page_config(page_title="Crash Insights Portfolio", page_icon="🚗", layout="wide")
 
 # ---------- TODO: Replace with your own info ----------
 NAME = "Santos Adducci"
 PROGRAM = "Your Program / Computer Science and General Mathematics / Student"
 INTRO = (
+    " I am a general mathematics and computer science student in my senior year"
     "Working on a lab for my data visualization class using Streamlit"
     "I love the idea of abstraction in computing. Everything is derived from basic logic" \
     "and clever physical systems. Everything that we do now could be constructed from some" \
@@ -41,4 +42,12 @@ for i, f in enumerate(FUN_FACTS, start=1):
     st.write(f"- {f}")
 
 st.divider()
-st.caption("Edit `pages/1_Bio.py` to customize this page.")
+
+st.subheader("Highlights")
+st.markdown("""
+- Coursework in Applied Mathematics, Data Analysis, and Computer Science  
+- Proficient in Python, Pandas, NumPy, Plotly, R, and Streamlit  
+- Experience with interactive dashboards and exploratory data analysis  
+- Strong focus on translating data into insights 
+- Familiarity with multi-page Streamlit applications and data cleaning pipelines
+""")

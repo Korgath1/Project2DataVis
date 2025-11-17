@@ -25,5 +25,3 @@ with st.expander("How this app is organized (for students)"):
         - Edit `pages/1_Bio.py` and `pages/2_Visualization.py` to complete the assignment.
         """
     )
-
-st.caption("Built with Streamlit • Class template")
