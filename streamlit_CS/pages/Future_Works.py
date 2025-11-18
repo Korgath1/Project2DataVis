@@ -3,8 +3,6 @@ import streamlit as st
 st.title("Future Work & Reflection")
 
 st.header("Next Steps")
-
-st.header("Next Steps")
 st.markdown("""
 Potential improvements:
 1. Live updates on the dashboards using an API
