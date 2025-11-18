@@ -1,6 +1,7 @@
 import streamlit as st
 import plotly.express as px
 import pandas as pd
+import os
 from utils import load_and_prep, compute_kpis
 
 df = load_and_prep("traffic_accidents.csv")
