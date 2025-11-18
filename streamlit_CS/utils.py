@@ -1,8 +1,6 @@
 import pandas as pd
 
-def load_and_prep(path="traffic_accidents.csv"):
-    df = pd.read_csv(path)
-
+def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
     # Convert crash_date and crash_hour to datetime
     df["crash_date"] = pd.to_datetime(df["crash_date"], errors="coerce")
     df["crash_hour"] = pd.to_numeric(df["crash_hour"], errors="coerce").fillna(0)

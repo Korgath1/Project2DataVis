@@ -1,10 +1,15 @@
 import streamlit as st
 import plotly.express as px
 import pandas as pd
-from utils import load_and_prep
+from utils import preprocess_data
 
 # Load dataset
-df = load_and_prep("traffic_accidents.csv")
+DATA_FILE = "traffic_accidents.csv"
+data_path = os.path.join(os.path.dirname(__file__), "..", DATA_FILE)
+data_path = os.path.abspath(data_path)
+
+df = pd.read_csv(data_path)
+df = preprocess_data(df)
 
 st.title("Selected Insights — Key Findings from Traffic Crash Data")
 st.write("""

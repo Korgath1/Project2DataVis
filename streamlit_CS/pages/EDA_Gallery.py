@@ -2,22 +2,15 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 import os
-from utils import load_and_prep
+from utils import preprocess_data
 
 # Load dataset
-def load_and_prep(file_name="traffic_accidents.csv"):
-    path = os.path.join(os.path.dirname(__file__), file_name)
-    path = os.path.abspath(path)
+DATA_FILE = "traffic_accidents.csv"
+data_path = os.path.join(os.path.dirname(__file__), "..", DATA_FILE)
+data_path = os.path.abspath(data_path)
 
-    df = pd.read_csv(path)
-    df["crash_date"] = pd.to_datetime(df["crash_date"])
-    df["crash_hour"] = pd.to_numeric(df["crash_hour"], errors="coerce").fillna(0).astype(int)
-    df["weekday"] = df["crash_date"].dt.day_name()
-    df["month"] = df["crash_date"].dt.month
-    df["is_fatal"] = df["injuries_fatal"] > 0
-    return df
-
-df = load_and_prep("traffic_accidents.csv")
+df = pd.read_csv(data_path)
+df = preprocess_data(df)
 
 st.title("EDA Gallery — Exploratory Data Analysis")
 st.write("Each chart includes a short 'How to read this chart' explainer and observations.")

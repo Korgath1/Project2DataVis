@@ -2,9 +2,16 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 import os
-from utils import load_and_prep, compute_kpis
+from utils import preprocess_data, compute_kpis
 
-df = load_and_prep("traffic_accidents.csv")
+# Load dataset
+DATA_FILE = "traffic_accidents.csv"
+data_path = os.path.join(os.path.dirname(__file__), "..", DATA_FILE)
+data_path = os.path.abspath(data_path)
+
+df = pd.read_csv(data_path)
+df = preprocess_data(df)
+
 st.title("Crash Dashboard — Interactive Insights")
 
 # Sidebar filters
