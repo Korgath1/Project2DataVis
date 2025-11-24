@@ -69,3 +69,4 @@ st.markdown("""
 - Nighttime crashes have higher severity and are more likely to involve alcohol especially after midnight 
 - Seasonal trends: winter months increase risk due to icy conditions; summer holidays increase total crashes
 """)
+###
